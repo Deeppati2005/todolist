@@ -19,11 +19,6 @@ function addTask() {
   saveDataLocal();
 }
 
-function enterKey(event) {
-  if (event.key == "Enter") {
-    addTask();
-  }
-}
 
 function removeTask(event) {
   if (event.target.tagName === "LI") {
@@ -34,6 +29,13 @@ function removeTask(event) {
     saveDataLocal();
   }
 }
+
+function enterKey(event) {
+  if (event.key == "Enter") {
+    addTask();
+  }
+}
+
 
 function saveDataLocal() {
   localStorage.setItem("data", listContainer.innerHTML);
